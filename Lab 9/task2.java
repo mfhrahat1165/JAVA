@@ -1,53 +1,38 @@
 public class task2 {
-    // Private fields
-    private String accountHolder;
-    private String accountNumber;
-    private double balance;
+public static void main(String[] args) {
+     BankAccount MFHS = new BankAccount(); 
+     MFHS.setAccountHolder(" Md Fahamid Haque Rahat "); 
+     MFHS.setAccountNumber("9874243555");
+     MFHS.setBalance(5000.00);
 
-    // Constructor
-    public task2(String accountHolder, String accountNumber, double balance) {
-        this.accountHolder = accountHolder;
-        this.accountNumber = accountNumber;
-        this.balance = balance;
-    }
+MFHS.displayAccountInfo();
+}
+}
 
-    // Setter methods
-    public void setAccountHolder(String accountHolder) {
-        this.accountHolder = accountHolder;
-    }
+class BankAccount {
+private String accountHolder;
+private String accountNumber; 
+private double balance;
 
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
+public void setAccountHolder(String accountHolder) 
+{
+      this.accountHolder = accountHolder;
+}
 
-    public void setBalance(double balance) {
-        if (balance >= 0) {
-            this.balance = balance;
-        } else {
-            System.out.println("Balance cannot be negative.");
-        }
-    }
+public void setAccountNumber(String accountNumber) 
+{
+      this.accountNumber = accountNumber;
+}
 
-    // Method to show account information securely
-    public void ShowAccountInfo() {
-        System.out.println("Account Holder: " + accountHolder);
-        System.out.println("Account Number: " + maskAccountNumber());
-        System.out.println("Balance: $" + balance);
-    }
+public void setBalance(double balance) 
+{
+      this.balance = balance;
+}
 
-    // Private helper method to mask the account number
-    private String maskAccountNumber() {
-        if (accountNumber.length() > 4) {
-            String last4 = accountNumber.substring(accountNumber.length() - 4);
-            return "**** **** **** " + last4;
-        } else {
-            return "****";
-        }
-    }
-
-    // Main method for demonstration
-    public static void main(String[] args) {
-        BankAccount account = new BankAccount("John Doe", "123456789012", 1500.00);
-        account.ShowAccountInfo();
-    }
+public void displayAccountInfo() 
+{
+      System.out.println("Account Holder: " + accountHolder);
+       System.out.println("Account Number: " + accountNumber); 
+       System.out.println("Balance: " + balance);
+}
 }

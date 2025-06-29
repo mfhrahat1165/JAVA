@@ -27,9 +27,9 @@ class Student {
  public class task1 {
  public static void main(String[] args) {
        Student s1 = new Student();
-       s1.setName("Tanim");
-       s1.setId("E221013");
-       s1.setCgpa(0.00);
+       s1.setName("Md Fahamid Haque Rahat");
+       s1.setId("E2433031");
+       s1.setCgpa(3.05);
        System.out.println("Student Info:");
        System.out.println("Name: " + s1.getName());
        System.out.println("ID: " + s1.getId());
